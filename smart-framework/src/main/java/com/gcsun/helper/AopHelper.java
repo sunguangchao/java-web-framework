@@ -2,7 +2,6 @@ package com.gcsun.helper;
 
 import com.gcsun.annotation.Aspect;
 import com.gcsun.annotation.Service;
-import com.gcsun.annotation.Transaction;
 import com.gcsun.proxy.AspectProxy;
 import com.gcsun.proxy.Proxy;
 import com.gcsun.proxy.ProxyManager;
@@ -36,7 +35,9 @@ public class AopHelper {
 
     private static Map<Class<?>, Set<Class<?>>> createProxyMap() throws Exception{
         Map<Class<?>, Set<Class<?>>> proxyMap = new HashMap<Class<?>, Set<Class<?>>>();
-
+        addAspectProxy(proxyMap);
+        addTransactionProxy(proxyMap);
+        return proxyMap;
     }
 
     private static void addAspectProxy(Map<Class<?>, Set<Class<?>>> proxyMap) throws Exception{

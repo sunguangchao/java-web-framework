@@ -1,6 +1,7 @@
 package com.gcsun.proxy;
 
 import com.gcsun.annotation.Transaction;
+import com.gcsun.helper.DatabaseHelper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
