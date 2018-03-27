@@ -4,6 +4,7 @@ import java.lang.reflect.Method;
 
 /**
  * Created by 11981 on 2017/9/17.
+ * 封装Action信息
  */
 public class Handler {
     private Class<?> controllerClass;

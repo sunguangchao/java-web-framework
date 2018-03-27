@@ -40,6 +40,7 @@ public class AopHelper {
         return proxyMap;
     }
 
+    //添加切面代理
     private static void addAspectProxy(Map<Class<?>, Set<Class<?>>> proxyMap) throws Exception{
         Set<Class<?>> proxyClassSet = ClassHelper.getClassSetBySuper(AspectProxy.class);
         for (Class<?> proxyClass : proxyClassSet){
@@ -50,10 +51,12 @@ public class AopHelper {
             }
         }
     }
+    //添加事务代理
     private static void addTransactionProxy(Map<Class<?>, Set<Class<?>>> proxyMap){
         Set<Class<?>> serviceClassSet = ClassHelper.getClassSetByAnnotation(Service.class);
         proxyMap.put(TransactionProxy.class, serviceClassSet);
     }
+
     private static Set<Class<?>> createTargetClassSet(Aspect aspect){
         Set<Class<?>> targetClassSet = new HashSet<Class<?>>();
         Class<? extends Annotation> annotation = aspect.value();

@@ -8,6 +8,7 @@ import java.lang.reflect.Method;
 
 /**
  * Created by 11981 on 2017/9/16.
+ * 用于封装反射相关的API
  */
 public final class ReflectionUtil {
     private static final Logger LOGGER = LoggerFactory.getLogger(ReflectionUtil.class);

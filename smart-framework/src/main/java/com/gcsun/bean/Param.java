@@ -11,6 +11,7 @@ import java.util.Map;
 
 /**
  * Created by 11981 on 2017/9/17.
+ * 请求参数对象
  */
 public class Param {
     private List<FormParam> formParamList;

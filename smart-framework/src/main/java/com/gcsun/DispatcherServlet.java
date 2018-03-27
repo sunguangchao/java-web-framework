@@ -23,6 +23,7 @@ import java.util.Map;
 
 /**
  * Created by 11981 on 2017/9/18.
+ * 最核心的请求转发器
  */
 @WebServlet(urlPatterns = "/*", loadOnStartup = 0)
 public class DispatcherServlet extends HttpServlet {

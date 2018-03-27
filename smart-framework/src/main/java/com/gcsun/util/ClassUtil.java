@@ -15,6 +15,7 @@ import java.util.jar.JarFile;
 
 /**
  * Created by 11981 on 2017/9/15.
+ * 类操作工具类
  */
 public final class ClassUtil {
     private static final Logger LOGGER = LoggerFactory.getLogger(ClassUtil.class);
@@ -26,7 +27,23 @@ public final class ClassUtil {
         return Thread.currentThread().getContextClassLoader();
     }
 
-    //加载类
+    /**
+     * 加载类
+     * @param className
+     * @param isInitialized
+     * @return
+     */
+//    public static Class<?> loadClass(String className, boolean isInitialized){
+//        Class<?> cls;
+//        try {
+//            cls = Class.forName(className, isInitialized, getClassLoader());
+//        }catch (ClassNotFoundException e){
+//            LOGGER.error("load class failure", e);
+//            throw new RuntimeException(e);
+//        }
+//        return cls;
+//    }
+
     public static Class<?> loadClass(String className, boolean isInitialized){
         Class<?> cls;
         try {
@@ -37,6 +54,8 @@ public final class ClassUtil {
         }
         return cls;
     }
+
+
 
     /**
      * 加载类（默认将初始化类）
@@ -54,6 +73,7 @@ public final class ClassUtil {
     public static Set<Class<?>> getClassSet(String packageName){
         Set<Class<?>> classSet = new HashSet<Class<?>>();
         try{
+            //根据包名转化为文件路径，读取.class文件或者jar包，获取指定的类名去加载类
             Enumeration<URL> urls = getClassLoader().getResources(packageName.replace(".", "/"));
             while (urls.hasMoreElements()){
                 URL url = urls.nextElement();

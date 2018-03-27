@@ -8,6 +8,7 @@ import java.util.Set;
 
 /**
  * Created by 11981 on 2017/9/17.
+ * 相当于一个Bean容器
  */
 public final class BeanHelper {
     //key-类名，value-Bean对象
@@ -27,6 +28,12 @@ public final class BeanHelper {
         return BEAN_MAP;
     }
 
+    /**
+     * 获取Bean实例
+     * @param cls
+     * @param <T>
+     * @return
+     */
     @SuppressWarnings("unchecked")
     public static <T> T getBean(Class<T> cls){
         if (!BEAN_MAP.containsKey(cls)){

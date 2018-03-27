@@ -27,7 +27,7 @@ public final class IocHelper {
                 if (ArrayUtil.isNotEmpty(beanFields)){
                     //遍历Bean Field
                     for (Field beanField : beanFields){
-                        //判断Bean Field是否带有Inject注解
+                        //判断Bean Field是否带有Inject注解-需要依赖注入
                         if (beanField.isAnnotationPresent(Inject.class)){
                             //在Bean Map中获取Bean Field对应的实例
                             Class<?> beanFieldClass = beanField.getType();

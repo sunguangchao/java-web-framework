@@ -55,8 +55,9 @@ public final class ClassHelper {
      */
     public static Set<Class<?>> getBeanClassSet(){
         Set<Class<?>> beanClassSet = new HashSet<Class<?>>();
+        //这里就是把两个集合合并到一起
         beanClassSet.addAll(getServiceClassSet());
-        beanClassSet.addAll(getBeanClassSet());
+        beanClassSet.addAll(getControllerClassSet());
         return beanClassSet;
     }
     /**

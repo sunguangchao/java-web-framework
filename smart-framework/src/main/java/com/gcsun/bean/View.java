@@ -5,6 +5,7 @@ import java.util.Map;
 
 /**
  * Created by 11981 on 2017/9/17.
+ * 返回视图对象
  */
 public class View {
     //视图路径

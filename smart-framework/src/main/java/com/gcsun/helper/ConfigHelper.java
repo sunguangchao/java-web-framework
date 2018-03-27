@@ -7,8 +7,11 @@ import java.util.Properties;
 
 /**
  * Created by 11981 on 2017/9/15.
+ * 加载配置项
+ * 属性文件助手类
  */
 public final class ConfigHelper {
+    //ConfigConstant为一个接口
     private static final Properties CONFIG_PROPS = PropsUtil.loadProps(ConfigConstant.CONFIG_FILE);
 
     public static String getJdbcDriver(){
