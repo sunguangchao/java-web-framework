@@ -36,8 +36,11 @@ public class DynamicProxy implements InvocationHandler {
         DynamicProxy dynamicProxy = new DynamicProxy(hello);
         //调用Proxy.newProxyInstance方法动态地创建一个Hello接口的代理类
         Hello helloProxy = (Hello) Proxy.newProxyInstance(
+                //ClassLoader
                 hello.getClass().getClassLoader(),
+                //该实现类的所有接口
                 hello.getClass().getInterfaces(),
+                //动态代理对象
                 dynamicProxy
         );
 
