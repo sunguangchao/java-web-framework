@@ -11,7 +11,7 @@ public class RpcBootstrapWithoutSpring {
 
     public static void main(String[] args) {
         String serverAddress = "127.0.0.1:18866";
-        ServiceRegistry serviceRegistry = new ServiceRegistry("zk.test.jiedaibao.com:2181");
+        ServiceRegistry serviceRegistry = new ServiceRegistry("");
         RpcServer rpcServer = new RpcServer(serverAddress, serviceRegistry);
         HelloService helloService = new HelloServiceImpl();
         rpcServer.addServer("com.nettyrpc.test.client.HelloService", helloService);
