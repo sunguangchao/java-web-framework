@@ -10,7 +10,7 @@ import java.util.concurrent.TimeUnit;
 
 public class BenchmarkAsync {
     public static void main(String[] args) throws InterruptedException{
-        ServiceDiscovery serviceDiscovery = new ServiceDiscovery("zk.test.jiedaibao.com:2181");
+        ServiceDiscovery serviceDiscovery = new ServiceDiscovery("");
         final RpcClient rpcClient = new RpcClient(serviceDiscovery);
 
         int threadNum = 10;
