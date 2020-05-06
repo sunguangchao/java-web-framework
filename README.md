@@ -1,7 +1,14 @@
 # java-web-framework
 从零开始写Java Web框架
-# nettyRpc
-[一个轻量级分布式RPC框架](https://www.cnblogs.com/luxiaoxun/p/5272384.html)
+
+##ThreadLocal
+
+
+##
+
+## nettyRpc
+* [一个轻量级分布式RPC框架](https://www.cnblogs.com/luxiaoxun/p/5272384.html)
+* [轻量级分布式RPC框架](https://my.oschina.net/huangyong/blog/361751)
 
 第四章
 =================
